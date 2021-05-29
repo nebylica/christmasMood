@@ -1,0 +1,892 @@
+/*Main*/
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #777777;
+    width: 100%;
+}
+
+/*Stylesheet*/
+
+.d-flex {
+    display: flex;
+}
+.alignCenter {
+    align-items: center;
+}
+.alignStart {
+    align-items: flex-start;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-btw {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-align-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.grow1 {
+    flex-grow: 1;
+}
+
+
+.p-100 {
+    padding: 100px 100px;
+}
+
+
+.textColorWhite::selection {
+    background-color: #E93F39;
+    color: #ffffff;
+}
+.textGreenWhite::selection {
+    background-color: #1dc5a3;
+    color: #ffffff;
+}
+
+/*Snow effect*/
+
+.snowflake {
+    color: #ffffff;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+
+
+/*Navigation bar*/
+
+.navigation {
+    background-color: #E93F39;
+    height: 56px;
+    width: 100%;
+    padding: 4px;
+    position: fixed;
+    z-index: 1;
+}
+.navImg {
+    width: 160px;
+    margin-left: 20px;
+}
+.navImg:hover {
+    cursor: pointer;
+}
+.navBar a{
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 25px;
+    text-decoration: none;
+}
+.navBar a:hover {
+    text-decoration: underline #1dc5a3;
+}
+
+/*Register bar*/
+
+.register {
+    background-image: url("https://livedemo00.template-help.com/wt_prod-27021/images/landing-christmas-01-1920x1080.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.registerInputs {
+    background-color: #E93F39;
+    padding: 35px 25px;
+    border-radius: 20px;
+}
+.registerInputs h4 {
+    color: #ffffff;
+    font-size: 36px;
+    font-family: 'Fredoka One', cursive;
+    margin: 0 0 25px 0;
+}
+.registerInputs input {
+    width: 308px;
+    height: 24px;
+    padding: 13px 16px;
+    margin: 10px 0 10px;
+    background-color: #d73935;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+.registerInputs input::placeholder {
+    color: #ffffff;
+    font-size: 18px;
+}
+.registerInputs input:focus {
+    background-color: #ffffff;
+    border: none;
+}
+.registerBtn {
+    background-color: #1dc5a3;
+    margin: 30px 0;
+    padding: 19px 32px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    color: #ffffff;
+    transition: 0.4s;
+}
+.registerBtn:hover {
+    background-color: #48947a;
+    cursor: pointer;
+}
+.registerText{
+    width: 340px;
+    color: #ffffff;
+}
+.registerText i {
+    margin-right: 15px;
+    font-size: 36px;
+}
+.registerText p {
+    font-size: 15px;
+}
+
+.registerRight {
+    width: 600px;
+    margin-left: 100px;
+    color: #ffffff;
+}
+.registerRightTitle {
+    position: relative;
+}
+.registerRightTitle img {
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: -50px;
+    left: -60px;
+}
+.registerRightTitle h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 96px;
+    line-height: 90px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.registerRight p {
+    margin: 18px 0 30px 0 ;
+    font-size: 19px;
+}
+.counter {
+    color: #ffffff;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.counterNumber {
+    font-family: 'Fredoka One', cursive;
+    font-size: 52px;
+}
+.counterTime {
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+}
+
+/*About*/
+
+.aboutText {
+    width: 450px;
+    margin-right: 30px;
+}
+.aboutText h2 {
+    color: #f81d3d;
+    font-family: 'Fredoka One', cursive;
+    font-size: 56px;
+    line-height: 60px;
+    margin: 0;
+}
+.aboutTextBig {
+    margin: 23px 0 30px;
+}
+.aboutNav i{
+    color: #1dc5a3;
+    font-size: 36px;
+}
+.aboutNav h5{
+    color: #1dc5a3;
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    margin: 0 0 10px 20px;
+}
+.aboutTextSmall {
+    font-size: 18px;
+    margin: 0 0 40px ;
+}
+.aboutImg {
+    width: 580px;
+}
+
+
+/*Booking*/
+
+.booking {
+    background-color: #f81d3d;
+    color: #ffffff;
+    text-align: center;
+}
+.bookingInfo {
+    width: 960px;
+}
+.bookingInfo h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 48px;
+    margin: 0;
+}
+.bookingBtn {
+    width: 216px;
+    margin: 12px 22px;
+    background-color: #1dc5a3;
+    padding: 19px 32px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    transition: 0.4s;
+}
+.bookingBtn:hover {
+    background-color: #48947a;
+    cursor: pointer;
+}
+
+
+/*Event Schedule*/
+
+.scheduleTitle {
+    color: #f81d3d;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 56px;
+    margin: 0;
+}
+.scheduleDays1 {
+    margin: 30px 30px;
+    color: #1dc5a3;
+}
+.scheduleDays2 {
+    margin: 30px 30px;
+    color: #777777;
+    transition: 0.4s;
+}
+.scheduleDays2:hover {
+    color: #1dc5a3;
+    cursor: pointer;
+}
+.scheduleDate {
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+}
+.scheduleDay {
+    font-size: 15px;
+}
+.bottomBorder {
+    border-bottom: 1px solid #bababa;
+    margin-bottom: 40px;
+}
+
+.cardImg {
+    border-radius: 10px;
+    width: 320px;
+}
+.eventCard {
+    width: 545px;
+    margin: 0 30px 30px 30px;
+}
+.eventCard h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    color: #333333;
+    margin: 0;
+    transition: 0.4s;
+}
+.eventCard h3:hover {
+    color: #f81d3d;
+    cursor: pointer;
+}
+.eventCardText {
+    margin: 18px 0;
+    line-height: 35px;
+}
+.cardHours p {
+    font-size: 18px;
+    color: #1dc5a3;
+}
+.cardHours i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #1dc5a3;
+}
+.eventCardBtn {
+    background-color: #f81d3d;
+    color: #ffffff;
+    padding: 19px 32px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    transition: 0.4s;
+}
+.eventCardBtn:hover {
+    cursor: pointer;
+}
+
+/*Video*/
+
+.video {
+    width: 100%;
+}
+.videoContainer {
+    position: relative;
+}
+.videoText {
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.videoText h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 85px;
+    color: #ffffff;
+    line-height: 85px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.videoText p {
+    color: #ffffff;
+    margin: 18px 0 0;
+}
+.videoBtn {
+    width: 246px;
+    background-color: #f81d3d;
+    color: #ffffff;
+    padding: 19px 32px;
+    margin: 40px 0 0;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    transition: 0.4s;
+}
+.videoBtn:hover {
+    cursor: pointer;
+}
+
+/*Testimonials*/
+
+.testimonials h2{
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 56px;
+    color: #f81d3d;
+    margin: 0;
+}
+.testimonialsImg {
+    width: 74px;
+}
+.testimonialsPhrase {
+    position: relative;
+    margin: 50px 20px 0 20px;
+}
+.testimonialsCard {
+    width: 290px;
+    height: 290px;
+    background-color: #1dc5a3;
+    padding: 15px 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+}
+.testimonialsPhrase svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    position: absolute;
+    left: 120px;
+    top: 315px;
+}
+.cardAuthor h6 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    margin: 0 0 0 15px;
+}
+.cardAuthor p {
+    font-size: 15px;
+    margin: 2px 0 0 15px;
+}
+
+/*Activities*/
+
+.bgGray {
+    background-color: #F3F4F6;
+}
+.activeTitle {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 56px;
+    color: #f81d3d;
+    margin: 0;
+}
+.activeTitleSmall {
+    text-align: center;
+    margin: 23px 0 0;
+}
+.activeCard {
+    margin: 50px 0;
+}
+.activeCardImg {
+    border-radius: 10px;
+    width: 550px;
+}
+.activeCardText {
+    width: 550px;
+}
+.activeCardText h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    color: #333333;
+    margin: 0;
+    transition: 0.4s;
+}
+.activeCardText h3:hover {
+    color: #f81d3d;
+    cursor: pointer;
+}
+.eventCardPrg {
+    margin: 18px 0 0;
+    line-height: 35px;
+}
+.activeHours p {
+    font-size: 18px;
+    color: #1dc5a3;
+}
+.activeHours i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #1dc5a3;
+}
+
+/*Ticket*/
+
+.tickets {
+    background-color: #f81d3d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ticketsTitle {
+    position: relative;
+}
+.ticketsTitle img {
+    width: 135px;
+    position: absolute;
+    top: -60px;
+    left: 0;
+}
+.ticketsTitle h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 85px;
+    line-height: 75px;
+    margin: 0 0 50px;
+}
+
+.counterTicket {
+    color: #ffffff;
+    margin-right: 30px;
+}
+.counterNumberTicket {
+    font-family: 'Fredoka One', cursive;
+    font-size: 44px;
+}
+.counterTimeTicket {
+    font-family: 'Fredoka One', cursive;
+    font-size: 15px;
+}
+
+.ticketInputs input {
+    width: 200px;
+    height: 34px;
+    padding: 13px 16px;
+    margin: 30px 20px;
+    background-color: #d73935;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+.ticketInputs input::placeholder {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 22px;
+}
+.ticketInputs input:focus {
+    background-color: #ffffff;
+}
+.ticketBtn {
+    width: 246px;
+    background-color: #1dc5a3;
+    padding: 19px 32px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    color: #ffffff;
+    transition: 0.4s;
+}
+.ticketBtn:hover {
+    background-color: #48947a;
+    cursor: pointer;
+}
+
+
+/*Pricing*/
+
+.pricing h2{
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 56px;
+    color: #f81d3d;
+    margin: 0;
+}
+
+.pricingCard {
+    width: 330px;
+    background-color: #1dc5a3;
+    padding: 50px 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    margin: 50px 20px 0 20px;
+}
+.pricingCard h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    margin: 0;
+}
+.dollar {
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    margin-top: 10px;
+}
+.price {
+    font-family: 'Fredoka One', cursive;
+    font-size: 85px;
+}
+.pricingList p{
+    margin: 10px 0 0 10px;
+}
+.pricingBtn {
+    width: 164px;
+    max-height: 60px;
+    background-color: #ffffff;
+    margin: 30px 0;
+    padding: 19px 32px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    color: #1a1a1a;
+    transition: 0.4s;
+}
+.pricingBtn:hover {
+    background-color: #393939;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*Photo Gallery*/
+
+.gallery img {
+    height: 100%;
+    width: 100%;
+}
+
+/*Questions*/
+
+.questions h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 56px;
+    color: #f81d3d;
+    margin: 0;
+    text-align: center;
+}
+.questions p {
+    margin: 23px 0 0;
+    text-align: center;
+}
+.questionCard {
+    margin: 40px 0;
+    padding: 0 15px;
+}
+.questionCard h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    color: #333333;
+    margin: 0;
+}
+.questionCard p{
+    font-size: 18px;
+    margin: 16px 0 0;
+}
+
+
+/*Contacts*/
+
+.contactsBg {
+    background-color: #f81d3d;
+    color: #ffffff;
+}
+.contactLeft {
+    width: 500px;
+}
+.contactLeft h2{
+    font-family: 'Fredoka One', cursive;
+    font-size: 56px;
+    margin: 0;
+}
+.contactLeft p {
+    margin: 23px 0 40px;
+}
+.contactNav i{
+    font-size: 36px;
+}
+.contactNav h5{
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    margin: 0 0 0 10px;
+}
+.icons {
+    margin-top: 40px;
+    margin-bottom: 130px;
+}
+.icons i{
+    font-size: 36px;
+    margin-right: 30px;
+}
+.contactRightsFooter {
+    font-size: 15px;
+}
+
+
+.contactRight {
+    width: 500px;
+}
+.contactRight h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    margin: 0 0 25px 0;
+}
+.contactRight input {
+    width: 450px;
+    height: 24px;
+    padding: 13px 16px;
+    margin: 10px 0 10px;
+    background-color: #d73935;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+.contactRight textarea {
+    width: 450px;
+    height: 150px;
+    padding: 13px 16px;
+    margin: 10px 0 10px;
+    background-color: #d73935;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contactRight input::placeholder {
+    color: #ffffff;
+    font-size: 18px;
+}
+.contactRight input:focus {
+    background-color: #ffffff;
+    border: none;
+}
+.contactRight textarea:focus {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+}
+.contactBtn {
+    background-color: #1dc5a3;
+    margin: 30px 0;
+    padding: 19px 32px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    color: #ffffff;
+    transition: 0.4s;
+}
+.contactBtn:hover {
+    background-color: #48947a;
+    cursor: pointer;
+}
+
+
+
+/*Media max-width 500px*/
+
+@media only screen and (max-width: 500px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    .w-450 {
+        width: 450px;
+    }
+
+    .order1 {
+        order: 1;
+    }
+    .d-none {
+        display: none;
+    }
+    .flex-column-small {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex-row-small {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .h1-small h1{
+        font-size: 45px;
+        line-height: 40px;
+    }
+    .h2-small h2{
+        font-size: 40px;
+    }
+    .h3-small h3{
+        font-size: 34px;
+    }
+
+    .mb-30px-small{
+        margin-bottom: 30px;
+    }
+    .m-10-small {
+        margin: 10px;
+    }
+    .p-50-20 {
+        padding: 50px 25px;
+    }
+
+/*Navigation bar*/
+
+    .navBtn div{
+        background-color: #ffffff;
+        width: 24px;
+        height: 4px;
+        margin: 4px 0 4px 20px;
+        border-radius: 5px;
+    }
+    .navBtn:hover {
+        cursor: pointer;
+    }
+/*Register bar*/
+
+    .registerRight {
+        margin-left: 20px;
+    }
+    .registerRightTitle img {
+        transform: scale(0.5);
+        top: -60px;
+        left: -70px;
+    }
+
+/*About*/
+
+    .aboutText {
+        margin: 0;
+    }
+    .aboutNav h5{
+        font-size: 24px;
+    }
+    .aboutTextSmall {
+        font-size: 16px;
+    }
+
+/*Event Schedule*/
+
+    .cardImg {
+        width: 460px;
+        margin: 30px 0;
+    }
+    .eventCard h3 {
+        font-size: 28px;
+    }
+
+/*Video*/
+
+    .videoText {
+        width: 90%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+
+    .videoBtn {
+        margin: 20px 0 0;
+    }
+
+/*Activities*/
+
+    .activeCardText h3 {
+        font-size: 28px;
+    }
+
+/*Tickets*/
+
+    .ticketsTitle img {
+        transform: scale(0.5);
+        top: -60px;
+        left: -30px;
+    }
+    .ticketInputs input {
+        width: 400px;
+        margin: 15px;
+    }
+
+/*Contacts*/
+
+    .contactRight input, .contactRight textarea {
+        width: 400px;
+    }
+}
